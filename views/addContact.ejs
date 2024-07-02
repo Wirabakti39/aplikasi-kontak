@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/addContact.css">
+    <title><%= titlePage %></title>
+</head>
+<body>
+    <div class="container">
+        <h1>Tambah Kontak Baru</h1>
+        <form action="/addContact" method="POST">
+            <div class="input-number">
+                <label for="number">Handphone</label>
+                <input type="text" name="number" id="number" placeholder="08..">
+            </div>
+            <div class="input-name">
+                <label for="name">Nama</label>
+                <input type="text" name="name" id="name" placeholder="nama..">
+            </div>
+            <div class="input-email">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="email..">
+            </div>
+            <div class="buttons">
+                <div class="cancel-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-240 120-480l240-240 56 56-144 144h568v80H272l144 144-56 56Z"/></svg>
+                    <span>kembali</span>
+                </div>
+                <button class="add-btn" type="submit">
+                    <span>tambah</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.querySelector('.cancel-btn').addEventListener('click', () => {
+            window.location.href = "/";
+        })
+    </script>
+</body>
+</html>

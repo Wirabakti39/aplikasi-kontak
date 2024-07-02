@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* 
+font: [
+    serif="Merriweather",
+    sans-serif="Poppins"
+    ]
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    background: rgba(0, 0, 0, .1);
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container {
+    width: 30rem;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 5rem 6rem;
+    box-shadow: 0 0 4px black;
+    position: relative;
+}
+
+.back-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4.6rem;
+    height: 3.2rem;
+    background: rgba(0, 0, 0, .1);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 30% 0;
+    box-shadow: .4px .2px 1px black;
+}
+.back-btn svg {
+    width: 32px;
+    height: 32px;
+}
+
+.img {
+    width: 15rem;
+    height: 15rem;
+    margin: auto;
+    background: url("../src/contact-profile.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    box-shadow: 0 0 5px black;
+}
+
+
+.contact-info p.name {
+    width: fit-content;
+    margin: 0 auto 1rem;
+    font-size: 2rem;
+    font-weight: 500;
+}
+.contact-info p.number {
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-shadow: 0 0 4px rgba(0, 0, 0, .5);
+}
+.contact-info p.email {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.action {
+    margin: 3rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* .action form {
+    display: inline;
+} */
+
+.action button {
+    border: none;
+    outline: none;
+    width: 6rem;
+    height: 3rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: .6px .8px 0 black;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.action button:hover {
+    transform: scale(1.05);
+}
+
+.edit-btn {
+    background: rgba(0, 0, 0, .2);
+}
+
+.delete-btn {
+    background: rgba(255, 0, 0, 0.2);
+}
+
+svg {
+    fill: #2e2e2e;
+    width: 30px;
+    height: 30px;
+}
+.delete-btn svg {
+    fill: rgba(255, 0, 0, 1);
+}
+
+@media (max-width:500px) {
+    .contact-container {
+        width: 95%;
+        padding: 5rem 5rem 3.5rem;
+    }
+    .contact-info p.name {
+        font-size: 1.4rem;
+        margin-top: .5rem;
+    }
+    .contact-info p.number {
+        font-size: 1rem;
+    }
+    .contact-info p.email {
+        font-size: .8rem;
+    }
+    .img {
+        width: 7rem;
+        height: 7rem;
+    }
+}
+
+@media (max-width:380px) {
+    .contact-info p.name {
+        font-size: .8rem;
+    }
+    .contact-info p.number {
+        font-size: .8rem;
+    }
+    .contact-info p.email {
+        font-size: .65rem;
+    }
+    .action button {
+        width: 45%;
+    }
+    .img {
+        width: 4rem;
+        height: 4rem;
+    }
+}
